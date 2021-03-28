@@ -36,16 +36,16 @@ listCasa2 = []
 
 
 for item in data:
-    tipoManga = item['pricingInfos']['TipoManga']
+    tipoManga = item['pricingInfos']['businessType']
     price = int(item['pricingInfos']['price'])
     longitude = item['address']['geoLocation']['location']['lon']
     latitude = item['address']['geoLocation']['location']['lat']
 
     if longitude != 0 and latitude !=0:
-      if tipoManga == 'Anime' and price >= 3500 or tipoManga == 'Manga' and price >= 600000:
+      if tipoManga == 'RENTAL' and price >= 3500 or tipoManga == 'SALE' and price >= 600000:
         listCasa1.append(item)
 
-        if tipoManga == 'Anime' and price >= 4000 or tipoManga == 'Manga' and price >= 700.000:
+        if tipoManga == 'RENTAL' and price >= 4000 or tipoManga == 'SALE' and price >= 700.000:
           listCasa2.append(item)
     else:
       print ("Temos 1")
