@@ -1,0 +1,10 @@
+[default]
+
+#url = 'http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/sources/source-sample.json'
+url = 'http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/sources/source-2.json'
+
+#Bounding Box Grupo ZAP
+minLon = -46.693419
+minLat = -23.568704
+maxLon = -46.641146
+maxLat = -23.546686
