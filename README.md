@@ -33,8 +33,10 @@ env | grep FLASK_ ;
 E iniciar o Flask
 ```sh
 flask run
-erro python linux não reconhece comando pip```
+```
+
 #### Rodar script
+
 Outra opção é executar o arquivo configure.sh (raiz do projeto), conteúdo do arquivo:
 ```sh
 #!/bin/bash
