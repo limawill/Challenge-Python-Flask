@@ -90,9 +90,11 @@ pageNumber e pageSize
 ```
 
 ## Estrutura do projeto
+```sh
 .
 ├── app.py                                      
 ├── configure.sh
 ├── README.md
 ├── settings.toml
 └── views.py
+```
