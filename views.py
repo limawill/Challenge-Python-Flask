@@ -1,7 +1,7 @@
-from dynaconf import settings             #pip3 install dynaconf
-from cachetools import cached, TTLCache   #pip install cachetools  
+from dynaconf import settings             
+from cachetools import cached, TTLCache     
 from flask import request  
-import urllib.request                     #pip install urllib3
+import urllib.request                     
 import json
 
 
@@ -26,14 +26,8 @@ def configure(app):
    
    @app.route('/')
    def home():
-      print(settings.URL)      
-      print(settings.minLon)
-      print(settings.minLat)
-      print(settings.maxLon)
-      print(settings.maxLat)
-      jsonData = getResponse(settings.URL)
-      print (jsonData)
-      return "Olá Mundo!"
+     return "Sintaxe:   <br><br> 127.0.0.1:5000/vivareal?pageNumber=1&pageSize=2  <br><br> ou <br><br>127.0.0.1:5000/zap?pageNumber=1&pageSize=2"
+
    
    @app.route('/vivareal', methods=['GET'])
    def vivareal():
