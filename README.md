@@ -11,8 +11,36 @@ Este projeto é executado no micro framework Python: Flask.
 - python-dotenv==0.17.0
 - urllib3==1.25.7
 
-## Como rodar localmente?
-O Software foi desenvolvido no linux  Fedora 32, para rodar o app primeiramente precisamos instalar suas dependencia (que foram listadas acima), se estiver utilizando um ambiente virtual remover o --user:
+## Como rodar localmente
+O Software foi desenvolvido no linux  Fedora 32, para rodar há 2 opções rodar o app dentro do Docker ou rodar localmente (direto na maquina ou em uma environment)
+
+### Docker
+
+Com o docker instalado na maquina rodar os seguintes comandos:
+```sh
+docker build -t flask:latest .
+```
+Após a compilação:
+```sh
+docker run -d -p 5000:5000 flask
+```
+Caso não tenha nenhum problema rodando o comando:
+```sh
+docker ps -a
+```
+Terá uma saida semelhante a está
+```sh
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS         PORTS                    NAMES
+292e3f98c6f4   flask     "flask run"   4 seconds ago   Up 2 seconds   0.0.0.0:5000->5000/tcp   gifted_brahmagupta
+```
+E no seu navegador de preferencia acessar:
+```sh
+http://127.0.0.1:5000/
+```
+
+
+Na segunda opção para testar o app primeiramente precisamos instalar suas dependencia (que foram listadas acima), se estiver utilizando um ambiente virtual remover o --user:
 ```sh
 pip install Flask --user;
 pip install python-dotenv --user;
